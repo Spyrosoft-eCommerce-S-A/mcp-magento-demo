@@ -1,0 +1,20 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Magento MCP ChatBot API",
+  "name_for_model": "magento_mcp_chatbot",
+  "description_for_human": "Query Magento 2 store data via MCP-compliant REST endpoints.",
+  "description_for_model": "Provides order status, product info, and return policy endpoints for chatbots.",
+  "auth": {
+    "type": "bearer",
+    "authorization_type": "Bearer",
+    "verification_tokens": {}
+  },
+  "api": {
+    "type": "openapi",
+    "url": "/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://store.example.com/media/logo.svg",
+  "contact_email": "support@store.example.com",
+  "legal_info_url": "https://store.example.com/legal"
+}

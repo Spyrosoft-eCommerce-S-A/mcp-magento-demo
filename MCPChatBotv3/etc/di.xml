@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * DI configuration for Spyrosoft_MCPChatBotv3
+ *
+ * @category  Spyrosoft
+ * @package   Spyrosoft_MCPChatBotv3
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Spyrosoft\MCPChatBotv3\Api\OrderStatusInterface"
+                type="Spyrosoft\MCPChatBotv3\Model\OrderStatus" />
+    <preference for="Spyrosoft\MCPChatBotv3\Api\ProductInfoInterface"
+                type="Spyrosoft\MCPChatBotv3\Model\ProductInfo" />
+    <preference for="Spyrosoft\MCPChatBotv3\Api\ReturnPolicyInterface"
+                type="Spyrosoft\MCPChatBotv3\Model\ReturnPolicy" />
+                
+    <type name="Magento\Webapi\Controller\Rest">
+        <plugin name="spyrosoft_mcp_webapi_auth" 
+                type="Spyrosoft\MCPChatBotv3\Plugin\WebApiAuthPlugin" />
+    </type>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="mcpchatbot" frontName="mcpchatbot">
+            <module name="Spyrosoft_MCPChatBotv4" />
+        </route>
+        <route id="well-known" frontName=".well-known">
+            <module name="Spyrosoft_MCPChatBotv4" before="Magento_Framework" />
+        </route>
+    </router>
+</config>

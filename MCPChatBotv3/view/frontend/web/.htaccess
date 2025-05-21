@@ -1,0 +1,5 @@
+# Allow AI plugin manifest access from .well-known
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^.well-known/ai-plugin\.json$ mcp/manifest/plugin [L]
+</IfModule>

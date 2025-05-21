@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="spyrosoft" translate="label" sortOrder="100">
+            <label>Spyrosoft</label>
+        </tab>
+        <section id="mcpchatbot" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>MCP ChatBot v2</label>
+            <tab>spyrosoft</tab>
+            <resource>Spyrosoft_MCPChatBotv2::config_mcpchatbotv2</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="return_policy_text" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Return Policy Text</label>
+                    <comment>Enter the store's return policy. This will be returned by the /V1/mcp/return-policy endpoint.</comment>
+                </field>
+            </group>
+            <group id="security" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Security</label>
+                <field id="enable_bearer_token" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Bearer Token Authentication</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If enabled, API requests will require a valid bearer token.</comment>
+                </field>
+                <field id="bearer_token" translate="label" type="obscure" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Bearer Token</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <comment>The bearer token required for API access if enabled. Keep this secret.</comment>
+                    <depends>
+                        <field id="enable_bearer_token">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Spyrosoft\MCPChatBotv7\Api\OrderStatusRepositoryInterface" type="Spyrosoft\MCPChatBotv7\Model\OrderStatusRepository"/>
+    <preference for="Spyrosoft\MCPChatBotv7\Api\Data\OrderStatusInterface" type="Spyrosoft\MCPChatBotv7\Model\Data\OrderStatus"/>
+    <preference for="Spyrosoft\MCPChatBotv7\Api\Data\OrderItemInterface" type="Spyrosoft\MCPChatBotv7\Model\Data\OrderItem"/>
+    <preference for="Spyrosoft\MCPChatBotv7\Api\ProductInfoRepositoryInterface" type="Spyrosoft\MCPChatBotv7\Model\ProductInfoRepository"/>
+    <preference for="Spyrosoft\MCPChatBotv7\Api\Data\ProductInfoInterface" type="Spyrosoft\MCPChatBotv7\Model\Data\ProductInfo"/>
+    <preference for="Spyrosoft\MCPChatBotv7\Api\ReturnPolicyRepositoryInterface" type="Spyrosoft\MCPChatBotv7\Model\ReturnPolicyRepository"/>
+    <preference for="Spyrosoft\MCPChatBotv7\Api\Data\ReturnPolicyInterface" type="Spyrosoft\MCPChatBotv7\Model\Data\ReturnPolicy"/>
+    <preference for="Spyrosoft\MCPChatBotv7\Api\OpenApiInterface" type="Spyrosoft\MCPChatBotv7\Model\OpenApi"/>
+</config>

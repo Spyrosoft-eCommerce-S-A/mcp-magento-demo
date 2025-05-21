@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Magento MCP ChatBot API",
+  "name_for_model": "mcp_chatbot",
+  "description_for_human": "Query Magento order status, product info, and return policy via MCP.",
+  "description_for_model": "Provides endpoints for chatbots to access Magento order status, product info, and return policy using the Model Context Protocol.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "/.well-known/openapi.json"
+  },
+  "logo_url": "https://store.example.com/media/logo.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "https://store.example.com/legal"
+}

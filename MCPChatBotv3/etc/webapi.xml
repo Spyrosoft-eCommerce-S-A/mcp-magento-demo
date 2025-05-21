@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Web API configuration for Spyrosoft_MCPChatBotv3
+ *
+ * @category  Spyrosoft
+ * @package   Spyrosoft_MCPChatBotv3
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/mcp/order-status/:email/:orderId" method="GET">
+        <service class="Spyrosoft\MCPChatBotv3\Api\OrderStatusInterface" method="getOrderStatus"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/mcp/product-info/:sku" method="GET">
+        <service class="Spyrosoft\MCPChatBotv3\Api\ProductInfoInterface" method="getProductInfo"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/mcp/return-policy" method="GET">
+        <service class="Spyrosoft\MCPChatBotv3\Api\ReturnPolicyInterface" method="getReturnPolicy"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>

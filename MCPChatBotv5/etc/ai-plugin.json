@@ -1,0 +1,22 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Spyrosoft MCP ChatBot",
+  "name_for_model": "mcp_chatbot",
+  "description_for_human": "Retrieve Magento store data via ChatBot",
+  "description_for_model": "Plugin for retrieving order status, product info, return policy via MCP endpoints.",
+  "auth": {
+    "type": "service_http",
+    "authorization_type": "Bearer",
+    "verification_tokens": {
+      "openai": ""
+    }
+  },
+  "api": {
+    "type": "openapi",
+    "url": "{{store_url}}/rest/mcp/schema/openapi",
+    "is_user_authenticated": false
+  },
+  "logo_url": "{{store_url}}/pub/media/logo.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "{{store_url}}/legal"
+}

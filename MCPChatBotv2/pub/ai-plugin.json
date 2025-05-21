@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Magento Store MCP ChatBot v2",
+    "name_for_model": "Spyrosoft_MCPChatBotv2",
+    "description_for_human": "Query your Magento store for order status, product information, and return policies.",
+    "description_for_model": "Plugin for querying a Magento 2 store. Can fetch order status given an email and order ID, retrieve product details by SKU, and provide the store's return policy. All MCP compliant.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "[STORE_URL_PLACEHOLDER]/openapi.json",
+        "is_user_authenticated": false
+    },
+    "logo_url": "[STORE_URL_PLACEHOLDER]/logo.png",
+    "contact_email": "support@example.com",
+    "legal_info_url": "[STORE_URL_PLACEHOLDER]/privacy-policy"
+}

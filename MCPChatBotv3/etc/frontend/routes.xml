@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Frontend routes configuration for Spyrosoft_MCPChatBotv3
+ *
+ * @category  Spyrosoft
+ * @package   Spyrosoft_MCPChatBotv3
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="mcp" frontName="mcp">
+            <module name="Spyrosoft_MCPChatBotv3" />
+        </route>
+        <route id="wellknown" frontName=".well-known">
+            <module name="Spyrosoft_MCPChatBotv3" />
+        </route>
+    </router>
+</config>

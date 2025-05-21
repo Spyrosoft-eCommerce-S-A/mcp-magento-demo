@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/mcp/order-status/:email/:orderId" method="GET">
+        <service class="Spyrosoft\MCPChatBotv5\Api\OrderStatusServiceInterface" method="getOrderStatus" />
+        <resources><resource ref="anonymous"/></resources>
+    </route>
+    <route url="/V1/mcp/product-info/:sku" method="GET">
+        <service class="Spyrosoft\MCPChatBotv5\Api\ProductInfoServiceInterface" method="getProductInfo" />
+        <resources><resource ref="anonymous"/></resources>
+    </route>
+    <route url="/V1/mcp/return-policy" method="GET">
+        <service class="Spyrosoft\MCPChatBotv5\Api\ReturnPolicyServiceInterface" method="getReturnPolicy" />
+        <resources><resource ref="anonymous"/></resources>
+    </route>
+    <route url="/.well-known/ai-plugin.json" method="GET">
+        <service class="Spyrosoft\MCPChatBotv5\Api\ManifestServiceInterface" method="getManifest" />
+        <resources><resource ref="anonymous"/></resources>
+    </route>
+    <route url="/mcp/schema/openapi" method="GET">
+        <service class="Spyrosoft\MCPChatBotv5\Api\SchemaServiceInterface" method="getSchema" />
+        <resources><resource ref="anonymous"/></resources>
+    </route>
+</routes>

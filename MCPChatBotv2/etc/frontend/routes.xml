@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Framework/App/etc/routes.xsd">
+    <router id="standard">
+        <route id="mcpchatbotv2" frontName=".well-known">
+            <module name="Spyrosoft_MCPChatBotv2" before="Magento_Backend" />
+        </route>
+        <route id="mcpopenapi" frontName="openapi.json">
+             <module name="Spyrosoft_MCPChatBotv2" before="Magento_Backend" />
+        </route>
+    </router>
+</config>

@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "Magento MCPChatBotv6 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Order Status",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <YOUR_TOKEN>",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/rest/V1/mcp/order-status/:email/:orderId",
+          "host": ["{{baseUrl}}"],
+          "path": ["rest", "V1", "mcp", "order-status", ":email", ":orderId"]
+        }
+      }
+    },
+    {
+      "name": "Get Product Info",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <YOUR_TOKEN>",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/rest/V1/mcp/product-info/:sku",
+          "host": ["{{baseUrl}}"],
+          "path": ["rest", "V1", "mcp", "product-info", ":sku"]
+        }
+      }
+    },
+    {
+      "name": "Get Return Policy",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <YOUR_TOKEN>",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/rest/V1/mcp/return-policy",
+          "host": ["{{baseUrl}}"],
+          "path": ["rest", "V1", "mcp", "return-policy"]
+        }
+      }
+    }
+  ]
+}

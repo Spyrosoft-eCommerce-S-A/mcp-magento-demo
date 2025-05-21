@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Spyrosoft MCP ChatBot API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "{store_url}/rest",
+      "variables": {
+        "store_url": {
+          "default": ""
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/V1/mcp/order-status/{email}/{orderId}": {
+      "get": {
+        "summary": "Get order status",
+        "parameters": [
+          { "name": "email", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "orderId", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Order status response",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/OrderStatus" } } }
+          }
+        }
+      }
+    },
+    "/V1/mcp/product-info/{sku}": {
+      "get": {
+        "summary": "Get product information",
+        "parameters": [
+          { "name": "sku", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product info response",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ProductInfo" } } }
+          }
+        }
+      }
+    },
+    "/V1/mcp/return-policy": {
+      "get": {
+        "summary": "Get return policy",
+        "responses": {
+          "200": {
+            "description": "Return policy response",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ReturnPolicy" } } }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OrderItem": {
+        "type": "object",
+        "properties": {
+          "sku": { "type": "string" },
+          "name": { "type": "string" },
+          "qty": { "type": "integer" }
+        }
+      },
+      "OrderStatus": {
+        "type": "object",
+        "properties": {
+          "order_id": { "type": "string" },
+          "status": { "type": "string" },
+          "shipment_tracking": { "type": ["string", "null"] },
+          "total": { "type": "number" },
+          "currency": { "type": "string" },
+          "created_at": { "type": "string" },
+          "items": { "type": "array", "items": { "$ref": "#/components/schemas/OrderItem" } }
+        }
+      },
+      "ProductInfo": {
+        "type": "object",
+        "properties": {
+          "sku": { "type": "string" },
+          "name": { "type": "string" },
+          "price": { "type": "number" },
+          "currency": { "type": "string" },
+          "stock_status": { "type": "string" },
+          "short_description": { "type": "string" },
+          "image_url": { "type": "string" },
+          "category_ids": { "type": "array", "items": { "type": "integer" } }
+        }
+      },
+      "ReturnPolicy": {
+        "type": "object",
+        "properties": {
+          "policy_text": { "type": "string" }
+        }
+      }
+    }
+  }
+}

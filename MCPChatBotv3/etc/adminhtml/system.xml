@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Admin configuration for Spyrosoft_MCPChatBotv3
+ *
+ * @category  Spyrosoft
+ * @package   Spyrosoft_MCPChatBotv3
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="spyrosoft" translate="label" sortOrder="100">
+            <label>Spyrosoft</label>
+        </tab>
+        <section id="mcp_chatbot" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>MCP ChatBot Settings</label>
+            <tab>spyrosoft</tab>
+            <resource>Spyrosoft_MCPChatBotv3::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="require_auth" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Require Authentication</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If enabled, API requests will require a bearer token</comment>
+                </field>
+                <field id="auth_token" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Authentication Token</label>
+                    <comment>Token to use for API authentication if required</comment>
+                    <depends>
+                        <field id="require_auth">1</field>
+                    </depends>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="return_policy" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Return Policy</label>
+                    <comment>Store return policy text (supports Markdown)</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

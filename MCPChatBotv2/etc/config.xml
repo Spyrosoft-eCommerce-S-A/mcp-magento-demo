@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Store/etc/config.xsd">
+    <default>
+        <mcpchatbot>
+            <general>
+                <enable>1</enable>
+                <return_policy_text>You may return items within 30 days of delivery. Please contact support for RMA instructions.</return_policy_text>
+            </general>
+            <security>
+                <enable_bearer_token>0</enable_bearer_token>
+                <bearer_token></bearer_token>
+            </security>
+        </mcpchatbot>
+    </default>
+</config>

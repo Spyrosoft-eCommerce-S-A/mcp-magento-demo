@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Default configuration values for Spyrosoft_MCPChatBotv3
+ *
+ * @category  Spyrosoft
+ * @package   Spyrosoft_MCPChatBotv3
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mcp_chatbot>
+            <general>
+                <enabled>0</enabled>
+                <require_auth>1</require_auth>
+                <auth_token>change_me</auth_token>
+                <return_policy>You may return items within 30 days of delivery. Please contact support for RMA instructions.</return_policy>
+            </general>
+        </mcp_chatbot>
+    </default>
+</config>

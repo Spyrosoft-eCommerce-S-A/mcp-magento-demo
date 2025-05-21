@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- Default configuration values for MCP ChatBot v5 -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/config.xsd">
+    <default>
+        <mcpchatbot>
+            <general>
+                <enabled>1</enabled>
+                <require_token>0</require_token>
+                <return_policy>You may return items within 30 days of delivery. Please contact support for RMA instructions.</return_policy>
+            </general>
+        </mcpchatbot>
+    </default>
+</config>

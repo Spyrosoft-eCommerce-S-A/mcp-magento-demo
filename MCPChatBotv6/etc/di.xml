@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Spyrosoft\MCPChatBotv6\Api\OrderStatusInterface" type="Spyrosoft\MCPChatBotv6\Model\OrderStatus" />
+    <preference for="Spyrosoft\MCPChatBotv6\Api\ProductInfoInterface" type="Spyrosoft\MCPChatBotv6\Model\ProductInfo" />
+    <preference for="Spyrosoft\MCPChatBotv6\Api\ReturnPolicyInterface" type="Spyrosoft\MCPChatBotv6\Model\ReturnPolicy" />
+    <type name="Magento\Framework\Webapi\Rest\Request">
+        <plugin name="spyrosoft_mcpchatbotv6_auth" type="Spyrosoft\MCPChatBotv6\Plugin\RestAuthPlugin" sortOrder="1" />
+    </type>
+</config>

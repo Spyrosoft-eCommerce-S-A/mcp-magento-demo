@@ -1,0 +1,151 @@
+{
+    "info": {
+        "_postman_id": "5a7c8f56-dc0e-4b4a-a8d5-a485c55b7671",
+        "name": "Magento MCP ChatBot API",
+        "description": "Collection for testing the Spyrosoft_MCPChatBotv3 module endpoints",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "AI Plugin Manifest",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/.well-known/ai-plugin.json",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        ".well-known",
+                        "ai-plugin.json"
+                    ]
+                },
+                "description": "Get the AI Plugin Manifest file"
+            },
+            "response": []
+        },
+        {
+            "name": "OpenAPI Schema",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/mcp/schema/openapi",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "mcp",
+                        "schema",
+                        "openapi"
+                    ]
+                },
+                "description": "Get the OpenAPI Schema"
+            },
+            "response": []
+        },
+        {
+            "name": "Order Status",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}",
+                        "type": "text",
+                        "description": "Bearer token for authentication (if required)"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/rest/V1/mcp/order-status/customer@example.com/100000123",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "rest",
+                        "V1",
+                        "mcp",
+                        "order-status",
+                        "customer@example.com",
+                        "100000123"
+                    ]
+                },
+                "description": "Get order status by email and order ID"
+            },
+            "response": []
+        },
+        {
+            "name": "Product Info",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}",
+                        "type": "text",
+                        "description": "Bearer token for authentication (if required)"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/rest/V1/mcp/product-info/24-MB01",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "rest",
+                        "V1",
+                        "mcp",
+                        "product-info",
+                        "24-MB01"
+                    ]
+                },
+                "description": "Get product information by SKU"
+            },
+            "response": []
+        },
+        {
+            "name": "Return Policy",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}",
+                        "type": "text",
+                        "description": "Bearer token for authentication (if required)"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/rest/V1/mcp/return-policy",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "rest",
+                        "V1",
+                        "mcp",
+                        "return-policy"
+                    ]
+                },
+                "description": "Get the store's return policy"
+            },
+            "response": []
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost/magento",
+            "type": "string",
+            "description": "Base URL of your Magento store"
+        },
+        {
+            "key": "authToken",
+            "value": "change_me",
+            "type": "string",
+            "description": "Authentication token if required"
+        }
+    ]
+}
