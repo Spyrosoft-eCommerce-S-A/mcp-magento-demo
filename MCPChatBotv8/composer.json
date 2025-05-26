@@ -1,0 +1,41 @@
+{
+    "name": "spyrosoft/module-mcp-chatbot",
+    "description": "Model Context Protocol compliant API for Magento 2 chatbot integration",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "authors": [
+        {
+            "name": "Spyrosoft",
+            "email": "info@spyrosoft.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "magento/framework": ">=103.0.0",
+        "magento/module-store": ">=101.1.0",
+        "magento/module-sales": ">=103.0.0",
+        "magento/module-catalog": ">=104.0.0",
+        "magento/module-config": ">=101.2.0",
+        "magento/module-webapi": ">=100.4.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Spyrosoft\\MCPChatBot\\": ""
+        }
+    },
+    "keywords": [
+        "magento",
+        "magento2",
+        "mcp",
+        "model-context-protocol",
+        "chatbot",
+        "api",
+        "rest"
+    ]
+}

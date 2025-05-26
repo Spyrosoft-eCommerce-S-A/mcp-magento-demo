@@ -12,7 +12,7 @@ class OrderStatus extends AbstractExtensibleModel implements OrderStatusInterfac
 {
     public function getOrderId(): string
     {
-        return (string)$this->_get(ApiEnum::ORDER_ID);
+        return (string)$this->getData(ApiEnum::ORDER_ID);
     }
 
     public function setOrderId(string $orderId): self
@@ -22,7 +22,7 @@ class OrderStatus extends AbstractExtensibleModel implements OrderStatusInterfac
 
     public function getStatus(): string
     {
-        return (string)$this->_get(ApiEnum::STATUS);
+        return (string)$this->getData(ApiEnum::STATUS);
     }
 
     public function setStatus(string $status): self
@@ -32,7 +32,7 @@ class OrderStatus extends AbstractExtensibleModel implements OrderStatusInterfac
 
     public function getShipmentTracking(): ?string
     {
-        return $this->_get(ApiEnum::SHIPMENT_TRACKING) === null ? null : (string)$this->_get(ApiEnum::SHIPMENT_TRACKING);
+        return $this->getData(ApiEnum::SHIPMENT_TRACKING) === null ? null : (string)$this->getData(ApiEnum::SHIPMENT_TRACKING);
     }
 
     public function setShipmentTracking(?string $shipmentTracking): self
@@ -42,7 +42,7 @@ class OrderStatus extends AbstractExtensibleModel implements OrderStatusInterfac
 
     public function getTotal(): float
     {
-        return (float)$this->_get(ApiEnum::TOTAL);
+        return (float)$this->getData(ApiEnum::TOTAL);
     }
 
     public function setTotal(float $total): self
@@ -52,7 +52,7 @@ class OrderStatus extends AbstractExtensibleModel implements OrderStatusInterfac
 
     public function getCurrency(): string
     {
-        return (string)$this->_get(ApiEnum::CURRENCY);
+        return (string)$this->getData(ApiEnum::CURRENCY);
     }
 
     public function setCurrency(string $currency): self
@@ -62,7 +62,7 @@ class OrderStatus extends AbstractExtensibleModel implements OrderStatusInterfac
 
     public function getCreatedAt(): string
     {
-        return (string)$this->_get(ApiEnum::CREATED_AT);
+        return (string)$this->getData(ApiEnum::CREATED_AT);
     }
 
     public function setCreatedAt(string $createdAt): self
@@ -75,7 +75,7 @@ class OrderStatus extends AbstractExtensibleModel implements OrderStatusInterfac
      */
     public function getItems(): array
     {
-        return $this->_get(ApiEnum::ITEMS) ?? [];
+        return [];
     }
 
     /**
@@ -84,6 +84,6 @@ class OrderStatus extends AbstractExtensibleModel implements OrderStatusInterfac
      */
     public function setItems(array $items): self
     {
-        return $this->setData(ApiEnum::ITEMS, $items);
+        return $this;
     }
 }

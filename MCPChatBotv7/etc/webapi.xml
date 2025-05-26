@@ -19,7 +19,7 @@
         </resources>
     </route>
     <route url="/V1/mcp/openapi.json" method="GET">
-        <service class="Spyrosoft\\MCPChatBotv7\\Api\\OpenApiInterface" method="getOpenApiSpec"/>
+        <service class="Spyrosoft\MCPChatBotv7\Api\OpenApiInterface" method="getOpenApiSpec"/>
         <resources>
             <resource ref="anonymous"/>
         </resources>

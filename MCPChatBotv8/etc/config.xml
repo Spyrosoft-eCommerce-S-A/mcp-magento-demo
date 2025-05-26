@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Spyrosoft. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <spyrosoft_mcpchatbot>
+            <general>
+                <enabled>1</enabled>
+                <require_token>0</require_token>
+                <bearer_token></bearer_token>
+                <return_policy>You may return items within 30 days of delivery. Please contact support for RMA instructions.</return_policy>
+            </general>
+        </spyrosoft_mcpchatbot>
+    </default>
+</config>

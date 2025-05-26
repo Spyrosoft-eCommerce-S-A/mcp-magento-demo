@@ -1,0 +1,164 @@
+{
+    "info": {
+        "name": "Magento 2 MCP ChatBot API",
+        "description": "Model Context Protocol compliant API for querying Magento 2 store data",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_postman_id": "mcp-chatbot-api",
+        "version": {
+            "major": 1,
+            "minor": 0,
+            "patch": 0
+        }
+    },
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8080",
+            "description": "Base URL of your Magento 2 store"
+        },
+        {
+            "key": "bearer_token",
+            "value": "",
+            "description": "Bearer token if authentication is required"
+        }
+    ],
+    "item": [
+        {
+            "name": "MCP Endpoints",
+            "item": [
+                {
+                    "name": "Get Order Status",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{bearer_token}}",
+                                "description": "Bearer token for authentication (if required)",
+                                "disabled": true
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/rest/V1/mcp/order-status/:email/:orderId",
+                            "host": ["{{base_url}}"],
+                            "path": ["rest", "V1", "mcp", "order-status", ":email", ":orderId"],
+                            "variable": [
+                                {
+                                    "key": "email",
+                                    "value": "customer@example.com",
+                                    "description": "Customer email address"
+                                },
+                                {
+                                    "key": "orderId",
+                                    "value": "000000001",
+                                    "description": "Order increment ID"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Product Info",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{bearer_token}}",
+                                "description": "Bearer token for authentication (if required)",
+                                "disabled": true
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/rest/V1/mcp/product-info/:sku",
+                            "host": ["{{base_url}}"],
+                            "path": ["rest", "V1", "mcp", "product-info", ":sku"],
+                            "variable": [
+                                {
+                                    "key": "sku",
+                                    "value": "24-MB01",
+                                    "description": "Product SKU"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Return Policy",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{bearer_token}}",
+                                "description": "Bearer token for authentication (if required)",
+                                "disabled": true
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/rest/V1/mcp/return-policy",
+                            "host": ["{{base_url}}"],
+                            "path": ["rest", "V1", "mcp", "return-policy"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "MCP Metadata",
+            "item": [
+                {
+                    "name": "AI Plugin Manifest",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/.well-known/ai-plugin.json",
+                            "host": ["{{base_url}}"],
+                            "path": [".well-known", "ai-plugin.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "OpenAPI Schema",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/openapi.json",
+                            "host": ["{{base_url}}"],
+                            "path": ["openapi.json"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
